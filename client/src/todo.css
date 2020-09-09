@@ -1,0 +1,35 @@
+.container {
+  margin-left: 25px;
+}
+
+.todo {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+
+.indicator {
+  width: 10px;
+  height: 20px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.done > .indicator {
+  background-color: mediumseagreen;
+}
+
+.undone {
+  text-decoration: none;
+}
+
+.undone > .indicator {
+  background-color: lightblue;
+}
+
+.todoText {
+  margin-left: 15px;
+  cursor: pointer;
+}

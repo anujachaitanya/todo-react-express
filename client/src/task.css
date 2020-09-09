@@ -1,0 +1,69 @@
+.taskContainer {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  cursor: pointer;
+}
+
+.todoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: bold;
+  width: 75%;
+}
+
+.taskInput {
+  font-size: larger;
+}
+
+.taskContent {
+  margin-left: 1em;
+  font-size: larger;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 62%;
+}
+
+.taskIcon {
+  height: 1.5em;
+  width: 0.7em;
+}
+
+.deleteTaskBtn,
+.deleteTodoBtn {
+  display: none;
+  color: grey;
+  font-weight: bold;
+}
+
+.taskContent:hover .deleteTaskBtn {
+  display: block;
+}
+
+.todoTitle:hover .deleteTodoBtn {
+  display: block;
+}
+
+.completed .taskIcon {
+  background-color: mediumseagreen;
+}
+
+.todo .taskIcon {
+  background-color: lightblue;
+}
+
+.completed .taskContent p {
+  text-decoration: line-through;
+}
+
+.todo .taskContent {
+  text-decoration: none;
+}
+
+.working .taskIcon {
+  background-color: orange;
+}
