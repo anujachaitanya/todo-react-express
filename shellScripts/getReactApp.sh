@@ -1,4 +1,4 @@
-git clone git@github.com:anujachaitanya/todo-react.git client
+git clone https://github.com/anujachaitanya/todo-react-express.git client
 cd client 
 npm install
 npm run build 
