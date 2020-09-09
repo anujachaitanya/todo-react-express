@@ -6,10 +6,10 @@ const { getDefaultStatus, getNextStatus } = require('./status');
 app.locals.Todo = { title: 'Todo', tasks: [], lastTaskId: 0 };
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  res.sendFile(path.join(__dirname + '../client/build/index.html'));
 });
 
 app.get('/api/getTodo', (req, res) => {
