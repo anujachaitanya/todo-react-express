@@ -20,10 +20,6 @@ app.use(express.static('build'));
 
 app.use(attachTodoDetails);
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html');
-});
-
 app.get('/api/getTodo', getTodoDetails);
 
 app.post('/api/addTask', addTask);
