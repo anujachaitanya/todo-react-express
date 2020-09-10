@@ -23,13 +23,9 @@ app.use(attachTodoDetails);
 app.get('/api/getTodo', getTodoDetails);
 
 app.post('/api/addTask', addTask);
-
 app.post('/api/toggleTaskStatus', updateStatus);
-
 app.post('/api/deleteTask', deleteTask);
-
 app.post('/api/setTitle', setTitle);
-
 app.post('/api/resetTodo', resetTodo);
 
 module.exports = { app };
