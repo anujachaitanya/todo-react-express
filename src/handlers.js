@@ -3,7 +3,7 @@ const { getDefaultStatus, getNextStatus } = require('./status');
 const getDefaultTodoDetails = () => ({
   tasks: [],
   title: 'Todo',
-  lastId: 0,
+  lastTaskId: 0,
 });
 
 const attachTodoDetails = (req, res, next) => {
@@ -19,7 +19,7 @@ const getTodoDetails = (req, res) => {
   res.json(req.app.locals.todoDetails);
 };
 
-const addTask = (req, res) => {
+const addTask = async (req, res) => {
   const { todoDetails, db } = req.app.locals;
   const { content } = req.body;
   todoDetails.lastTaskId++;
@@ -28,7 +28,8 @@ const addTask = (req, res) => {
     id: todoDetails.lastTaskId,
     status: getDefaultStatus(),
   });
-  db.setTodoDetails(todoDetails).then(res.end);
+  await db.setTodoDetails(todoDetails);
+  res.end();
 };
 
 const deleteTask = (req, res) => {

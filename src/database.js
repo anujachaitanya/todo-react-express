@@ -31,7 +31,7 @@ class Database {
         if (err) {
           return reject(err);
         }
-        return resolve(res);
+        return resolve(true);
       });
     });
   }
